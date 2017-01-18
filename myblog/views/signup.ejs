@@ -1,0 +1,41 @@
+<%-include('header')%>
+<div class="ui grid">
+    <div class="four wide column">
+
+    </div>
+    <div class="eight wide column">
+      <%#enctype="multipart/form-data"上传非文本的内容主要是图片视频等 %>
+        <form class="ui form segment" enctype="multipart/form-data" method="post">
+            <div class="field required">
+                <label>用户名</label>
+                <input type="text" name="name" placeholder="用户名">
+            </div>
+            <div class="field required">
+                <label>密码</label>
+                <input type="password" name="password" placeholder="密码">
+            </div>
+            <div class="field required">
+                <label>重复密码</label>
+                <input type="password" name="repassword" placeholder="重复密码">
+            </div>
+            <div class="field required">
+              <label>性别</label>
+                <select class="ui dropdown" name="gender">
+                    <option value="m">男</option>
+                    <option value="f">女</option>
+                    <option value="x">保密</option>
+                </select>
+            </div>
+            <div class="field required">
+                <label>头像</label>
+                <input type="file" name="avatar">
+            </div>
+            <div class="field required">
+                <label>个人简介</label>
+                <textarea name="bio" rows="5"></textarea>
+            </div>
+            <input type="submit" name="" value="注册" class="ui button fluid blue">
+        </form>
+    </div>
+</div>
+<%-include('footer') %>
